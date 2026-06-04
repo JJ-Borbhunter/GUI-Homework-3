@@ -1,0 +1,105 @@
+body {
+    display: flex;
+    background-color: #f0f0f0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    height: auto;
+    border: 4px double #61AFEF;
+    background-color: white;
+    margin: 10px;
+}
+
+legend {
+    margin: 0 auto;
+    background-color: #1f232a;
+    color: #4DA6FF;
+    padding: 5px;
+    border-radius: 10px;
+    width: 15vw;
+    min-width: fit-content;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.15em;
+}
+
+label {
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 30px;
+    background: linear-gradient(to bottom, #dfdfdf, #cccccc);
+    border-top: 3px solid #f0f0f0;
+    border-left: 3px solid #f0f0f0;
+    border-right: 3px solid darkgrey;
+    border-bottom: 3px solid darkgrey;
+
+    padding: 4px 12px;
+    font-family: Tahoma, sans-serif;
+    font-size: 11px;
+}
+button:active {
+    margin-top: 20px;
+    background: linear-gradient(to bottom, #dcdcdc, #f4f4f4);
+    border-bottom: 3px solid #f0f0f0;
+    border-right: 3px solid #f0f0f0;
+    border-left: 3px solid darkgrey;
+    border-top: 3px solid darkgrey;
+
+    padding: 4px 12px;
+    font-family: Tahoma, sans-serif;
+    font-size: 11px;
+}
+
+#error-container {
+    margin-top: auto;
+    margin-bottom: auto;
+    color: red;
+    text-align: center;
+}
+
+#table-container {
+    overflow: auto;
+    width: 75vw;
+    height: 95vh;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background-color: #1f232a;
+    color: #4DA6FF;
+    padding: 1em;
+    z-index: 1;
+    box-shadow: inset -1px -1px 0 0 #61AFEF;
+}
+
+td {
+    box-shadow: inset -1px -1px 0 0 black;
+    padding: 1em;
+    text-align: center;
+    background-color: white;
+}
+
+tr th:first-child {
+    left: 0;
+    top: auto;
+    z-index: 2;
+}
+
+table tr:first-child th:first-child {
+    top: 0;
+    left: 0;
+    z-index: 3;
+}

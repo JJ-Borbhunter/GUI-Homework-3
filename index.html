@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Multiplication Table</title>
+    <meta charset="utf-8">
+    <link href="mult.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="mult.js" defer></script>
+</head>
+<body>
+    <fieldset>
+        <legend>Parameters</legend>
+        <label for="min-x">Minimum row value:</label>
+        <input id="min-x" name="min-x" type="number">
+        <label for="max-x">Maximum row value:</label>
+        <input id="max-x" name="max-x" type="number">
+        <label for="min-y">Minimum column value:</label>
+        <input id="min-y" name="min-y" type="number">
+        <label for="max-y">Maximum column value:</label>
+        <input id="max-y" name="max-y" type="number">
+        <button id="submit">Submit</button>
+        <div id="error-container"></div>
+    </fieldset>
+    <div id="table-container">
+    </div>
+</body>
+</html>
