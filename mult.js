@@ -1,3 +1,12 @@
+/*
+File: mult.js
+GUI Assignment: Creating an Interactive Dynamic Table
+James Bord, UMass Lowell Computer Science, wzhou@cs.uml.edu
+Copyright (c) 2021 by Bord. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by JB on June 8, 2026
+*/
+
 
 // function to place an error string into the empty container in the html designed to hold it
 function log_error(err_str) {
