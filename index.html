@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Template head -->
     <title>Dynamic Multiplication Table</title>
     <meta charset="utf-8">
     <link href="mult.css" rel="stylesheet">
@@ -8,19 +9,35 @@
     <script src="mult.js" defer></script>
 </head>
 <body>
+    <!-- Area for the submission of parameters -->
     <fieldset>
+        <!-- area title bar -->
         <legend>Parameters</legend>
+
+        <!-- minimum row value input -->
         <label for="min-x">Minimum row value:</label>
         <input id="min-x" name="min-x" type="numberic" pattern="[0-9]*">
+
+        <!-- maximum row value input -->
         <label for="max-x">Maximum row value:</label>
         <input id="max-x" name="max-x" type="numberic" pattern="[0-9]*">
+
+        <!-- minimum column value input -->
         <label for="min-y">Minimum column value:</label>
         <input id="min-y" name="min-y" type="numberic" pattern="[0-9]*">
+
+        <!-- maximum column value input -->
         <label for="max-y">Maximum column value:</label>
         <input id="max-y" name="max-y" type="numberic" pattern="[0-9]*">
+
+        <!-- Submit button -->
         <button id="submit">Submit</button>
+
+        <!-- empty div for displaying errors later -->
         <div id="error-container"></div>
     </fieldset>
+
+    <!-- empty div for holding the resulting table -->
     <div id="table-container">
     </div>
 </body>
