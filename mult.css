@@ -45,16 +45,11 @@ button {
     font-size: 11px;
 }
 button:active {
-    margin-top: 20px;
     background: linear-gradient(to bottom, #dcdcdc, #f4f4f4);
     border-bottom: 3px solid #f0f0f0;
     border-right: 3px solid #f0f0f0;
     border-left: 3px solid darkgrey;
     border-top: 3px solid darkgrey;
-
-    padding: 4px 12px;
-    font-family: Tahoma, sans-serif;
-    font-size: 11px;
 }
 
 #error-container {
@@ -83,6 +78,7 @@ th {
     padding: 1em;
     z-index: 1;
     box-shadow: inset -1px -1px 0 0 #61AFEF;
+    font-size: small;
 }
 
 td {
@@ -90,6 +86,7 @@ td {
     padding: 1em;
     text-align: center;
     background-color: white;
+    font-size: small;
 }
 
 tr th:first-child {
@@ -102,4 +99,18 @@ table tr:first-child th:first-child {
     top: 0;
     left: 0;
     z-index: 3;
+}
+
+
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+    }
+    fieldset {
+        width: auto;
+    }
+    #table-container {
+        width: auto;
+        height: auto;
+    }
 }

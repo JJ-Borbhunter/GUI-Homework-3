@@ -1,12 +1,13 @@
+
 function log_error(err_str) {
     document.getElementById("error-container").innerHTML = err_str;
 }
 
 
-
 function generate_multiplication_table(x_min, x_max, y_min, y_max) {
 
     var error = false;
+
     if(x_min > x_max) {
         error = true;
         log_error(
@@ -26,6 +27,13 @@ function generate_multiplication_table(x_min, x_max, y_min, y_max) {
         log_error(
             "Neither of your ranges can exceed 301 numbers, as otherwise your \
             browser might be over taxed."
+        );
+    }
+
+    if(isNaN(x_min) || isNaN(x_max) || isNaN(y_min) || isNaN(y_max)) {
+        error = true;
+        log_error(
+            "Please remove any non-numeric characters from the input boxes."
         );
     }
 
@@ -67,8 +75,6 @@ function generate_multiplication_table(x_min, x_max, y_min, y_max) {
 
     table_cont.appendChild(table);
 }
-
-
 
 
 
