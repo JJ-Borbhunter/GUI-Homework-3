@@ -19,6 +19,9 @@ updated by JB on June 8, 2026
 </head>
 <body>
     <!-- Area for the submission of parameters -->
+    <form>
+
+    <!-- Fieldset for the in-line title -->
     <fieldset>
         <!-- area title bar -->
         <legend>Parameters</legend>
@@ -40,11 +43,12 @@ updated by JB on June 8, 2026
         <input id="max-y" name="max-y" type="numberic" pattern="[0-9]*">
 
         <!-- Submit button -->
-        <button id="submit">Submit</button>
+        <input type="submit" value="Submit" id="submit">
 
         <!-- empty div for displaying errors later -->
         <div id="error-container"></div>
     </fieldset>
+    </form>
 
     <!-- empty div for holding the resulting table -->
     <div id="table-container">

@@ -110,7 +110,9 @@ function generate_multiplication_table(x_min, x_max, y_min, y_max) {
 
 const submit_button = document.getElementById("submit");
 
-function submit_onclick() {
+function submit_onclick(e) {
+    e.preventDefault();
+
     // Aquire all four numbers as numbers
     var x_min = Number(document.getElementById("min-x").value);
     var x_max = Number(document.getElementById("max-x").value);

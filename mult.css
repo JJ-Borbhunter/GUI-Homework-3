@@ -10,12 +10,17 @@ updated by JB on June 8, 2026
 
 /* 
 Flex display on the body for the horizontal layout.
-The background is a light grey so the white elements pop off from it
+The background is a light grey so the white elements pop off from it.
+Scrollbars are disabled.
 */
 body {
     display: flex;
     background-color: #f0f0f0;
     font-family: 'Courier New', Courier, monospace;
+    height: 96vh;
+    width: 96vw;
+    margin: auto;
+    overflow: hidden;
 }
 
 /* 
@@ -26,11 +31,17 @@ and a white background.
 fieldset {
     display: flex;
     flex-direction: column;
-    width: 20vw;
-    height: auto;
+    width: 100%;
+    height: 100%;
     border: 4px double #61AFEF;
     background-color: white;
-    margin: 10px;
+    min-width: 0;
+    box-sizing: border-box;
+}
+form {
+    width: 21%;
+    height: 95%;
+    margin: auto;
 }
 
 
@@ -44,7 +55,7 @@ legend {
     color: #4DA6FF;
     padding: 5px;
     border-radius: 10px;
-    width: 15vw;
+    width: 75%;
     min-width: fit-content;
     text-align: center;
     text-transform: uppercase;
@@ -58,12 +69,12 @@ label {
 }
 
 /* 
-Buttons.
+buttons.
 Need a margin on top to seperate from the block of inputs. Has a gradient 
 top and selectively shaded borders to give a 3d feel. Padding applied so it's
 always a wider rectangle.
 */
-button {
+#submit {
     margin-top: 30px;
     background: linear-gradient(to bottom, #dfdfdf, #cccccc);
     border-top: 3px solid #f0f0f0;
@@ -76,11 +87,12 @@ button {
     font-size: 11px;
 }
 
+
 /* 
 On press all border and gradient colors reverse
 to give the impression of indenting. 
 */
-button:active {
+#submit:active {
     background: linear-gradient(to bottom, #dcdcdc, #f4f4f4);
     border-bottom: 3px solid #f0f0f0;
     border-right: 3px solid #f0f0f0;
@@ -104,9 +116,9 @@ Scrolling container for the table. Takes up 3/4ths of the page.
 */
 #table-container {
     overflow: scroll;
-    width: 75vw;
-    height: 95vh;
-    margin: 10px;
+    width: 75%;
+    height: 95%;
+    margin: auto;
 }
 
 /*
@@ -169,18 +181,21 @@ table tr:first-child th:first-child {
     body {
         flex-direction: column;
     }
+    form {
+        width: 100%;
+        height: 45%;
+    }
     /* input is half the screen height */
     fieldset {
         width: auto;
-        height: 45vh
     }
     /* table takes up the other half */
     #table-container {
-        width: auto;
-        height: 45vh;
+        width: 100%;
+        height: 50%;
     }
-    /* button is pushed up closer to the input to provide space for errors */
-    button {
+    /* #submit is pushed up closer to the input to provide space for errors */
+    #submit {
         margin-top: 10px;
     }
     /* errors get very small text so the entire message is always displayed. */
